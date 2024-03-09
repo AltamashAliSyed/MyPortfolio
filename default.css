@@ -1,0 +1,298 @@
+:root{
+    --mainColor:#777171;
+    --secondatrycolor:#fff;
+
+    --borderColor:#c1c1c1;
+
+    --mainText:black;
+    --secondaryText:#4b5156;
+
+    --themeDotBorder:#24292e;
+    --previewbg:rgb(251,249,243,0.8)
+   
+    
+}
+
+
+
+html, body{
+    padding:0;
+    margin:0;
+
+}
+
+h1, h2, h3,h4,h5,h6,strong{
+
+    color:var(--mainText);
+}
+
+p,li,span,label,input,textarea{
+    color:var(--secondaryText);
+    font-family: "Audiowide", sans-serif;
+
+}
+
+a{
+    text-decoration:none;
+    color:#17a2b8;
+}
+
+ul{
+    list-style: none;
+}
+
+h1 {font-size:56px;}
+h2 {font-size:36px;}
+h3 {font-size:28px;}
+h4 {font-size:24px;}
+h5 {font-size:20px;}
+h6 {font-size:16px;}
+
+
+.s1{
+    background-color: var(--mainColor);
+    border-bottom: 1px solid var(--borderColor);
+    overflow: auto;
+}
+
+.s2{
+    background-color: var(--secondatrycolor);
+    border-bottom: 1px solid var(--borderColor);
+    overflow:auto;
+
+}
+
+.main-container{
+    width:1200px;
+    margin:0 auto;
+}
+
+@media screen and(max-width:1200px)
+{
+    .main-container{
+        width:95%;
+    }
+}
+
+.greeting-wrapper{
+    display:grid;
+    justify-content: center;
+    align-content: center;
+
+    min-height: 10em;
+}
+
+.intro-wrapper{
+    background-color: var(--secondatrycolor);
+    border:1px solid var(--borderColor);
+    border-radius:5px 5ps 0 0 ;
+
+    -webkit-box-shadow: 50px -20px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 50px -20px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 50px -20px 5px 0px rgba(0,0,0,0.75);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    grid-template-rows: 3em 30em;
+    grid-template-areas:
+        'nav-wrapper nav-wrapper'
+        'left-column right-column'
+    
+    ;
+
+}
+
+.dots-wrapper{
+
+    display :flex;
+    padding:10px;
+    
+    
+
+
+}
+
+#dot-1{
+    background-color:red;
+}
+
+#dot-2{
+    background-color:black;
+
+}
+
+#dot-3{
+    background-color:green;
+}
+
+.browser-dot{
+    background-color: black;
+    height:15px;
+    width:15px;
+    border-radius: 50%;
+    margin:5px;
+
+
+
+}
+
+.nav-wrapper{
+   border-bottom: 1px solid var(--borderColor);
+    grid-area: nav-wrapper;
+    display:flex ;
+    justify-content:space-between;
+    align-items: center;
+    background-color: var(--mainColor);
+}
+
+#navigation{
+    margin:0;
+    padding: 10px;
+    
+}
+
+.left-column img {
+    height: 150px; /* Adjust the height as needed */
+    width: auto;
+    justify-content: center; /* Maintain aspect ratio */
+}
+
+.left-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top:50px;
+}
+
+.theme-dot:hover{
+    border-width:5px;
+}
+
+#light-mode{
+    background-color: #fff;
+}
+
+#blue-mode{
+    background-color: blue;
+}
+
+#green-mode{
+    background-color: green;
+}
+
+
+.theme-dot{
+    height:30px;
+    width:30px;
+    background-color: black;
+    border-radius: 50%;
+
+    margin:5px;
+    border:2px solid var(--themeDotBorder);
+
+    -webkit-box-shadow: 50px -20px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 50px -20px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 50px -20px 5px 0px rgba(0,0,0,0.75);
+
+    cursor:pointer;
+
+}
+
+
+#theme-options-wrapper{
+    display:flex;
+    justify-content: center;
+}
+#profile_pic{
+    display:black;
+    margin:0 auto;
+
+    height:200px;
+    width:200px;
+    object-fit: cover;
+    border:2px solid var(--borderColor);
+
+}
+
+#navigation li{
+    display:inline-block;
+    margin-right: 5px;
+    margin-left: 5px;
+
+}
+
+.left-column{
+    grid-area: left-column;
+   
+}
+
+.right-column{
+    grid-area: right-column;
+    display:grid;
+    align-content: center;
+    
+}
+
+#preview{
+    width:300px;
+
+    background-color: var(--previewbg);
+    padding: 15px;
+    position:relative;
+}
+
+.corner{
+    width:7px;
+    height:7px;
+    border-radius:1.5px solid #17a2b8;
+    background-color:#fff;
+    position:absolute;
+}
+
+#corner-tl{
+    top:-5px;
+    left:-5px;
+}
+
+#corner-tr{
+    top:-5px;
+    right:-5px;
+}
+
+#corner-br{
+    top:-5px;
+    right:-5px;
+}
+
+#corner-bl{
+    top:-5px;
+    bottom:-5px;
+}
+
+#preview-shadow{
+    
+    width:300px;
+    height:180px;
+    
+    box-shadow: 32px 15px 50px black;
+}
+
+.about-wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+    padding-bottom: 50px;
+    padding-top: 50px;
+
+
+}
+
+.social-links{
+    display:grid;
+    align-content: center;
+    text-align: center;
+}
+
+.about-me {
+    text-align: center;
+}
